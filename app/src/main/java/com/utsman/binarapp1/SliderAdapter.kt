@@ -21,6 +21,4 @@ class SliderAdapter(fragmentManager: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         return listFragment[position]
     }
-
-
 }

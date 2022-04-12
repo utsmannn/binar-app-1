@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.viewpager.widget.ViewPager
 import com.utsman.binarapp1.fragment.AccountFragment
@@ -58,6 +59,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         setupViewPager()
+
+
+        val bundle = intent.extras
+        val name = bundle?.getString("name")
+        val age = bundle?.getInt("age")
+
+        val tvBundleResult: TextView = findViewById(R.id.tv_bundle_result)
+        tvBundleResult.text = name + " " + age.toString()
+
+        tvBundleResult.setOnClickListener {
+            val intent = Intent(this, ChatActivity::class.java)
+            bundle?.let { intent.putExtras(it) }
+            startActivity(intent)
+        }
     }
 
     private fun attachHomeFragment() {
