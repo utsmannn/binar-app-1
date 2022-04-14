@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.snackbar.Snackbar
 import com.utsman.binarapp1.fragment.AccountFragment
 import com.utsman.binarapp1.fragment.HomeFragment
 
@@ -43,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         println("binar main -------> oncreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        toast()
+        snackbar()
 
         val buttonIntent: Button = findViewById(R.id.btn_intent)
         buttonIntent.setOnClickListener {
@@ -73,6 +77,17 @@ class MainActivity : AppCompatActivity() {
             bundle?.let { intent.putExtras(it) }
             startActivity(intent)
         }
+
+        val buttonDialog: Button = findViewById(R.id.btn_dialog)
+        buttonDialog.setOnClickListener {
+            val intent = Intent(this, DialogActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        val nameIntro = intent.getStringExtra("name")
+        val tvNameResult: TextView = findViewById(R.id.tv_name_result)
+        tvNameResult.text = nameIntro
     }
 
     private fun attachHomeFragment() {
@@ -103,6 +118,25 @@ class MainActivity : AppCompatActivity() {
 
         // set posisi halaman
         //vpSlider.setCurrentItem(2, true)
+    }
+
+    private fun toast() {
+        val button: Button = findViewById(R.id.btn_show_toast)
+        button.setOnClickListener {
+            Toast.makeText(this, "ini toast", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun snackbar() {
+        val button: Button = findViewById(R.id.btn_show_snackbar)
+        val snackbar = Snackbar.make(button, "ini snackbar", Snackbar.LENGTH_INDEFINITE)
+        snackbar.setAction("back") {
+            onBackPressed()
+        }
+
+        button.setOnClickListener {
+            snackbar.show()
+        }
     }
 
     override fun onStop() {

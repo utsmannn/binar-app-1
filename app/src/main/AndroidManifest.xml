@@ -13,7 +13,7 @@
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".BinarOnboardingActivity"
+            android:name=".BinarAppIntro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
-        <activity android:name=".BinarAppIntro"/>
+        <activity android:name=".BinarOnboardingActivity"/>
         <activity android:name=".UserActivity"/>
+        <activity android:name=".DialogActivity"/>
     </application>
 
 </manifest>

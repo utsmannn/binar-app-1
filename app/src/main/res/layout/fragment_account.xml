@@ -15,4 +15,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="input nama"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

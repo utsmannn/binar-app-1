@@ -5,9 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout/activity_binar_onboarding.xml" value="0.14175724637681159" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.2242572445327929" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2869999968446791" />
+        <entry key="app/src/main/res/layout/activity_dialog.xml" value="0.11503623188405797" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.236124997981824" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.14175724637681159" />
         <entry key="app/src/main/res/layout/activity_user.xml" value="0.14588224551626952" />
+        <entry key="app/src/main/res/layout/dialog_custom_dialog.xml" value="0.1609375" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.12635869565217392" />
         <entry key="app/src/main/res/layout/fragment_binar_onboarding.xml" value="0.27788224435863557" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2586322483744985" />
